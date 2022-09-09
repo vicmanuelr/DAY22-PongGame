@@ -12,6 +12,7 @@ right_paddle = Paddle(RIGHT_PADDLE_COOR)
 left_paddle = Paddle(LEFT_PADDLE_COOR)
 
 # setup screen and listeners for key press response
+screen.tracer(0) # Disable screen animation to create paddles
 screen.setup(width=800, height=600, startx=100, starty=-75)
 screen.bgcolor("black")
 screen.title("Pong Game")
@@ -19,5 +20,8 @@ screen.listen()
 screen.onkey(fun=right_paddle.up, key="Up")
 screen.onkey(fun=right_paddle.down, key="Down")
 
+game_is_on = True
+while game_is_on:
+    screen.update() # works with screen animation
 
 screen.exitonclick()
