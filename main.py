@@ -4,7 +4,7 @@ from paddle import Paddle
 WIDTH = 800
 HEIGHT = 600
 RIGHT_PADDLE_COOR = (350, 0)
-LEFT_PADLE_COOR = (-350, 0)
+LEFT_PADDLE_COOR = (-350, 0)
 
 screen = Screen()
 right_paddle = Paddle(RIGHT_PADDLE_COOR)
