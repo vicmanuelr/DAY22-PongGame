@@ -22,6 +22,6 @@ class Paddle:
             self.paddle.forward(20)
 
     def down(self):
-        """Method for movement of paddle down with wall limt"""
+        """Method for movement of paddle down with wall limit"""
         if not self.paddle.ycor() < -240:
             self.paddle.backward(20)
