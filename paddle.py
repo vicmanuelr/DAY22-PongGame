@@ -12,16 +12,15 @@ class Paddle:
         self.paddle.speed("fastest")
         self.paddle.penup()
         self.paddle.color("white")
-        self.paddle.setheading(UP)
-        self.paddle.shapesize(stretch_wid=1, stretch_len=5)
+        self.paddle.shapesize(stretch_wid=5, stretch_len=1)
         self.paddle.goto(coordinates)
 
     def up(self):
         """Movement of paddle up with wall limit"""
         if not self.paddle.ycor() > 240:
-            self.paddle.forward(20)
+            self.paddle.sety(self.paddle.ycor() + 20)
 
     def down(self):
         """Method for movement of paddle down with wall limit"""
         if not self.paddle.ycor() < -240:
-            self.paddle.backward(20)
+            self.paddle.sety(self.paddle.ycor() - 20)
