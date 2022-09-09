@@ -23,8 +23,5 @@ class Paddle:
         self.paddle.backward(20)
 
     def collision_wall(self):
-        if self.head.xcor() > 290 or self.head.xcor() < -300:
+        if self.paddle.ycor() > 290 or self.head.ycor() < -300:
             return True
-        elif self.head.ycor() > 290 or self.head.ycor() < -300:
-            return True
-asdf = jaja
