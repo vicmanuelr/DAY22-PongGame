@@ -29,5 +29,5 @@ class Paddle:
             return True
 
     def wall_limit_down(self):
-        if self.paddle.ycor() > 240:
+        if self.paddle.ycor() > -240:
             return True
