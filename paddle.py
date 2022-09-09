@@ -17,13 +17,17 @@ class Paddle:
         self.paddle.goto(coordinates)
 
     def up(self):
-        if not self.wall_limit():
+        if not self.wall_limit_up():
             self.paddle.forward(20)
 
     def down(self):
-        if not self.wall_limit():
+        if not self.wall_limit_down():
             self.paddle.backward(20)
 
-    def wall_limit(self):
-        if self.paddle.ycor() > 240 or self.paddle.ycor() < -240:
+    def wall_limit_up(self):
+        if self.paddle.ycor() > 240:
+            return True
+
+    def wall_limit_down(self):
+        if self.paddle.ycor() > 240:
             return True
