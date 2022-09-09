@@ -27,3 +27,4 @@ class Paddle:
             return True
         elif self.head.ycor() > 290 or self.head.ycor() < -300:
             return True
+asdf = jaja
