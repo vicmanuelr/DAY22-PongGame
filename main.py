@@ -8,7 +8,8 @@ LEFT_PADDLE_COOR = (-350, 0)
 
 screen = Screen()
 right_paddle = Paddle(RIGHT_PADDLE_COOR)
-computer_paddle = Paddle(LEFT_PADDLE_COOR)
+left_paddle = Paddle(LEFT_PADDLE_COOR)
+
 
 screen.setup(width=800, height=600, startx=100, starty=-75)
 screen.bgcolor("black")
