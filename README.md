@@ -1,2 +1,2 @@
 # DAY22-PongGame
-Using turtle to build pong game.
+From the udemy course https://www.udemy.com/course/100-days-of-code/ day 22 tutorial.  Using turtle to build pong game.
