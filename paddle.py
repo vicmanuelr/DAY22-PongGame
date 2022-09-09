@@ -17,11 +17,13 @@ class Paddle:
         self.paddle.goto(coordinates)
 
     def up(self):
-        self.paddle.forward(20)
+        if not self.wall_limit():
+            self.paddle.forward(20)
 
     def down(self):
-        self.paddle.backward(20)
+        if not self.wall_limit():
+            self.paddle.backward(20)
 
-    def collision_wall(self):
-        if self.paddle.ycor() > 290 or self.head.ycor() < -300:
+    def wall_limit(self):
+        if self.paddle.ycor() > 240 or self.paddle.ycor() < -240:
             return True
