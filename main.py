@@ -1,4 +1,4 @@
-from turtle import Screen, Turtle
+from turtle import Screen
 from paddle import Paddle
 
 WIDTH = 800
@@ -19,6 +19,8 @@ screen.title("Pong Game")
 screen.listen()
 screen.onkey(fun=right_paddle.up, key="Up")
 screen.onkey(fun=right_paddle.down, key="Down")
+screen.onkey(fun=left_paddle.up, key="w")
+screen.onkey(fun=left_paddle.down, key="s")
 
 game_is_on = True
 while game_is_on:
