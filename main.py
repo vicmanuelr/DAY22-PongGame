@@ -13,7 +13,7 @@ left_paddle = Paddle(LEFT_PADDLE_COOR)
 
 # setup screen and listeners for key press response
 screen.tracer(0)  # Disable screen animation to create paddles
-screen.setup(width=800, height=600, startx=100, starty=-75)
+screen.setup(width=WIDTH, height=HEIGHT, startx=100, starty=-75)
 screen.bgcolor("black")
 screen.title("Pong Game")
 screen.listen()
