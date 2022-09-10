@@ -1,5 +1,6 @@
 from turtle import Screen
 from paddle import Paddle
+from ball import Ball
 
 WIDTH = 800
 HEIGHT = 600
@@ -10,6 +11,7 @@ LEFT_PADDLE_COOR = (-350, 0)
 screen = Screen()
 right_paddle = Paddle(RIGHT_PADDLE_COOR)
 left_paddle = Paddle(LEFT_PADDLE_COOR)
+ball = Ball()
 
 # setup screen and listeners for key press response
 screen.tracer(0)  # Disable screen animation to create paddles
