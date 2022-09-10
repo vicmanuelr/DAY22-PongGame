@@ -1,6 +1,7 @@
 from turtle import Screen
 from paddle import Paddle
 from ball import Ball
+from scoreboard import Scoreboard
 
 WIDTH = 800
 HEIGHT = 600
@@ -12,6 +13,7 @@ screen = Screen()
 right_paddle = Paddle(RIGHT_PADDLE_COOR)
 left_paddle = Paddle(LEFT_PADDLE_COOR)
 ball = Ball()
+scoreboard = Scoreboard()
 
 # setup screen and listeners for key press response
 screen.tracer(0)  # Disable screen animation to create paddles
@@ -37,10 +39,10 @@ while game_is_on:
         ball.paddle_bounce()
     # Conditions of ball off the board/table/screen
     if ball.xcor() > 380:
-        print("left scores a point")
         ball.ball_restart()
+        scoreboard.left_point()
     elif ball.xcor() < -380:
-        print("right scores a point")
         ball.ball_restart()
+        scoreboard.right_point()
 
 screen.exitonclick()
