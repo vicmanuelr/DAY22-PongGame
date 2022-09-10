@@ -13,7 +13,7 @@ class Ball(Turtle):
         self.speed("slowest")
 
     def start_moving(self):
-        self.setheading(36.87)
-        self.forward(20)
-        time.sleep(0.1)
-
+        x_move = self.xcor() + 14
+        y_move = self.ycor() + 10
+        self.goto(x_move, y_move)
+        time.sleep(0.08)
