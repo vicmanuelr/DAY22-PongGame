@@ -27,5 +27,6 @@ screen.onkey(fun=left_paddle.down, key="s")
 game_is_on = True
 while game_is_on:
     screen.update()  # works with screen animation
+    ball.start_moving()
 
 screen.exitonclick()
