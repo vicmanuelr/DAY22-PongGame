@@ -28,7 +28,12 @@ game_is_on = True
 while game_is_on:
     screen.update()  # works with screen animation
     ball.start_moving()
-    if ball.ycor() > 285 or ball.ycor() < -285:
+    # Wall bounce conditions for ball
+    if ball.ycor() > 280 or ball.ycor() < -280:
         ball.wall_bounce()
+    # Paddle bounce conditions for ball
+    if ball.distance(right_paddle.position()) < 50 and ball.xcor() > 335 or ball.distance(
+            left_paddle.position()) < 50 and ball.xcor() < -335:
+        ball.paddle_bounce()
 
 screen.exitonclick()

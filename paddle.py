@@ -24,3 +24,6 @@ class Paddle:
         """Method for movement of paddle down with wall limit"""
         if not self.paddle.ycor() < -240:
             self.paddle.sety(self.paddle.ycor() - 20)
+
+    def position(self):
+        return self.paddle.position()
