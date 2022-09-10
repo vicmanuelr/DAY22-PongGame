@@ -28,5 +28,7 @@ game_is_on = True
 while game_is_on:
     screen.update()  # works with screen animation
     ball.start_moving()
+    if ball.ycor() > 285 or ball.ycor() < -285:
+        ball.wall_bounce()
 
 screen.exitonclick()
