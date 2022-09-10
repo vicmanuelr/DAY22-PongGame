@@ -35,5 +35,12 @@ while game_is_on:
     if ball.distance(right_paddle.position()) < 50 and ball.xcor() > 335 or ball.distance(
             left_paddle.position()) < 50 and ball.xcor() < -335:
         ball.paddle_bounce()
+    # Conditions of ball off the board/table/screen
+    if ball.xcor() > 380:
+        print("left scores a point")
+        ball.ball_restart()
+    elif ball.xcor() < -380:
+        print("right scores a point")
+        ball.ball_restart()
 
 screen.exitonclick()
